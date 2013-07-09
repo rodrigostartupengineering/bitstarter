@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
     var fs = require('fs');
     var bData = new Buffer(256);
 
-    fs.readFile('index.html', function(err, data){
+    fs.readFile('./index.html', function(err, data){
 	if(err) throw err;
 	bData.write(data, "utf-8");
     });	
