@@ -5,11 +5,11 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
 
     var fs = require('fs');
-   // var bData = new Buffer(256);
     var content;
+
     fs.readFile('./index.html', function(err, data){
 	if(err) throw err;
-	//bData.write(data, "utf-8");
+
 	content = data;
     });	
 
